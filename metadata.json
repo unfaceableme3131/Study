@@ -1,6 +1,6 @@
 {
-  "name": "Study Command Center",
-  "description": "Personal study planner, syllabus tracker & smart alarm application for B.Com (Hons.) Semester 1 students with automated scheduling and double revision tracking.",
+  "name": "EduCore",
+  "description": "EduCore: Personal study planner, syllabus tracker & smart alarm application for B.Com (Hons.) Semester 1 students with double revision tracking and Gemini AI.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

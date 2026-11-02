@@ -22,6 +22,6 @@ dependencyResolutionManagement {
   }
 }
 
-rootProject.name = "Study Command"
+rootProject.name = "EduCore"
 
 include(":app")

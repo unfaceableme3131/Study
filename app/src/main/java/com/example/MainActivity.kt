@@ -106,8 +106,8 @@ fun MainAppScaffold(viewModel: StudyViewModel) {
                             contentAlignment = Alignment.Center
                         ) {
                             Icon(
-                                imageVector = Icons.Default.Shield,
-                                contentDescription = "Shield Emblem",
+                                imageVector = Icons.Default.School,
+                                contentDescription = "EduCore Emblem",
                                 tint = NeonCyan,
                                 modifier = Modifier.size(20.dp)
                             )
@@ -116,7 +116,7 @@ fun MainAppScaffold(viewModel: StudyViewModel) {
                         Column {
                             Row(verticalAlignment = Alignment.CenterVertically) {
                                 Text(
-                                    text = "STUDY COMMAND",
+                                    text = "EDUCORE",
                                     style = MaterialTheme.typography.titleMedium.copy(
                                         fontWeight = FontWeight.ExtraBold,
                                         letterSpacing = 1.2.sp,

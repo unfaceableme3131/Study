@@ -14,21 +14,15 @@
                 android:endX="108"
                 android:endY="108"
                 android:type="linear">
-                <item android:offset="0.0" android:color="#0A1128" />
-                <item android:offset="1.0" android:color="#001F54" />
+                <item android:offset="0.0" android:color="#080E1E" />
+                <item android:offset="1.0" android:color="#0B1A3A" />
             </gradient>
         </aapt:attr>
     </path>
-    <!-- Subtle command center grid pattern -->
+    <!-- Subtle circular radial accent -->
     <path
-        android:pathData="M24,24 L84,24 L84,84 L24,84 Z"
-        android:strokeColor="#1E3A8A"
-        android:strokeWidth="1"
-        android:fillColor="#00000000" />
-    <path
-        android:pathData="M54,18 L54,90 M18,54 L90,54"
-        android:strokeColor="#1E3A8A"
-        android:strokeWidth="0.8"
-        android:strokeAlpha="0.4"
-        android:fillColor="#00000000" />
+        android:pathData="M54,54 m-36,0 a36,36 0 1,1 72,0 a36,36 0 1,1 -72,0"
+        android:strokeColor="#1E2D4A"
+        android:strokeWidth="1.2"
+        android:fillColor="#0D172E" />
 </vector>

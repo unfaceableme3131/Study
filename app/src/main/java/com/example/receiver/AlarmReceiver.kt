@@ -25,7 +25,7 @@ class AlarmReceiver : BroadcastReceiver() {
 
     companion object {
         const val CHANNEL_ID = "study_command_alarms_channel"
-        const val CHANNEL_NAME = "Study Command Alarms & Routines"
+        const val CHANNEL_NAME = "EduCore Alarms & Routines"
         const val EXTRA_ALARM_ID = "extra_alarm_id"
         const val EXTRA_ALARM_TITLE = "extra_alarm_title"
         const val EXTRA_ALARM_TIME = "extra_alarm_time"

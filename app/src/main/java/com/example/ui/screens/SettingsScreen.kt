@@ -380,7 +380,7 @@ fun SettingsScreen(
             text = {
                 Column {
                     Text(
-                        "Study Command Center Progress Summary:\n" +
+                        "EduCore Progress Summary:\n" +
                         "• Program: B.Com (Hons.) Semester 1\n" +
                         "• Window: 3 Nov – 6 Dec 2026\n" +
                         "• Subjects: 7 Core & Elective Papers\n" +
@@ -393,7 +393,7 @@ fun SettingsScreen(
                 Button(
                     onClick = {
                         val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-                        val clip = ClipData.newPlainText("Study Progress", "Study Command Center: 3 Nov - 6 Dec 2026 Schedule Ready.")
+                        val clip = ClipData.newPlainText("Study Progress", "EduCore: 3 Nov - 6 Dec 2026 Schedule Ready.")
                         clipboard.setPrimaryClip(clip)
                         Toast.makeText(context, "Summary copied to clipboard", Toast.LENGTH_SHORT).show()
                         showExportDialog = false
