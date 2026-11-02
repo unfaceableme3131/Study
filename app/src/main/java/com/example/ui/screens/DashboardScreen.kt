@@ -428,6 +428,94 @@ fun DashboardScreen(
             }
         }
 
+        // 4B. GEMINI AI ACADEMIC COPILOT LAUNCHER CARD
+        item {
+            Card(
+                shape = RoundedCornerShape(18.dp),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+                border = androidx.compose.foundation.BorderStroke(
+                    1.dp,
+                    Brush.horizontalGradient(
+                        listOf(SolarAmber.copy(alpha = 0.5f), NeonCyan.copy(alpha = 0.3f))
+                    )
+                ),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable { viewModel.navigateTo(ScreenTab.AI_COPILOT) }
+                    .testTag("gemini_ai_dashboard_card")
+            ) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(14.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier.weight(1f)
+                    ) {
+                        Box(
+                            modifier = Modifier
+                                .size(44.dp)
+                                .clip(RoundedCornerShape(12.dp))
+                                .background(SolarAmber.copy(alpha = 0.15f))
+                                .border(1.dp, SolarAmber.copy(alpha = 0.4f), RoundedCornerShape(12.dp)),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.AutoAwesome,
+                                contentDescription = "Gemini AI",
+                                tint = SolarAmber,
+                                modifier = Modifier.size(24.dp)
+                            )
+                        }
+                        Spacer(modifier = Modifier.width(12.dp))
+                        Column {
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                Text(
+                                    text = "GEMINI AI COPILOT",
+                                    style = MaterialTheme.typography.labelSmall.copy(
+                                        color = SolarAmber,
+                                        fontWeight = FontWeight.Bold,
+                                        letterSpacing = 1.sp
+                                    )
+                                )
+                                Spacer(modifier = Modifier.width(6.dp))
+                                Surface(
+                                    shape = RoundedCornerShape(4.dp),
+                                    color = NeonCyan.copy(alpha = 0.15f)
+                                ) {
+                                    Text(
+                                        text = "PDF & MOCKS",
+                                        modifier = Modifier.padding(horizontal = 4.dp, vertical = 1.dp),
+                                        style = MaterialTheme.typography.labelSmall.copy(
+                                            color = NeonCyan,
+                                            fontSize = 8.sp,
+                                            fontWeight = FontWeight.ExtraBold
+                                        )
+                                    )
+                                }
+                            }
+                            Text(
+                                text = "Ask syllabus doubts, generate mock papers & export notes to PDF",
+                                style = MaterialTheme.typography.bodySmall.copy(
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    fontSize = 11.sp
+                                )
+                            )
+                        }
+                    }
+
+                    Icon(
+                        imageVector = Icons.AutoMirrored.Filled.ArrowForward,
+                        contentDescription = "Open AI Copilot",
+                        tint = SolarAmber
+                    )
+                }
+            }
+        }
+
         // 5. BACKLOG CATCH-UP NOTICE (IF ANY)
         if (backlogTasks.isNotEmpty()) {
             item {

@@ -11,6 +11,9 @@ import com.example.data.DefaultData
 import com.example.data.model.*
 import com.example.data.repository.StudyRepository
 import com.example.receiver.AlarmReceiver
+import com.example.ai.AiStudyTutor
+import com.example.util.PdfExporter
+import java.io.File
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import java.time.LocalDate
@@ -24,6 +27,7 @@ enum class ScreenTab(val title: String) {
     REVISION("Revision"),
     ANALYTICS("Analytics"),
     ALARMS("Alarms"),
+    AI_COPILOT("AI Tutor"),
     SETTINGS("Settings")
 }
 
@@ -321,5 +325,68 @@ class StudyViewModel(application: Application) : AndroidViewModel(application) {
         viewModelScope.launch {
             repository.resetAllProgress()
         }
+    }
+
+    // --- AI COPILOT STATE & ACTIONS ---
+    private val aiTutor = AiStudyTutor()
+
+    private val _aiResponse = MutableStateFlow("")
+    val aiResponse: StateFlow<String> = _aiResponse.asStateFlow()
+
+    private val _isAiLoading = MutableStateFlow(false)
+    val isAiLoading: StateFlow<Boolean> = _isAiLoading.asStateFlow()
+
+    private val _selectedAiSubject = MutableStateFlow("Financial Accounting")
+    val selectedAiSubject: StateFlow<String> = _selectedAiSubject.asStateFlow()
+
+    fun setSelectedAiSubject(subject: String) {
+        _selectedAiSubject.value = subject
+    }
+
+    fun askGemini(question: String) {
+        if (question.isBlank()) return
+        viewModelScope.launch {
+            _isAiLoading.value = true
+            _aiResponse.value = ""
+            val subject = _selectedAiSubject.value
+            aiTutor.streamAnswer(subject, question).collect { chunk ->
+                _aiResponse.value += chunk
+            }
+            _isAiLoading.value = false
+        }
+    }
+
+    fun generateMockQuestions(unitTitle: String) {
+        viewModelScope.launch {
+            _isAiLoading.value = true
+            _aiResponse.value = ""
+            val subject = _selectedAiSubject.value
+            aiTutor.generateMockQuestions(subject, unitTitle).collect { chunk ->
+                _aiResponse.value += chunk
+            }
+            _isAiLoading.value = false
+        }
+    }
+
+    fun generateCheatSheet(topicTitle: String) {
+        viewModelScope.launch {
+            _isAiLoading.value = true
+            _aiResponse.value = ""
+            val subject = _selectedAiSubject.value
+            aiTutor.generateQuickSummary(subject, topicTitle).collect { chunk ->
+                _aiResponse.value += chunk
+            }
+            _isAiLoading.value = false
+        }
+    }
+
+    fun exportCurrentAiToPdf(context: Context, title: String): File? {
+        val content = _aiResponse.value
+        if (content.isBlank()) return null
+        return PdfExporter.generateStudyPdf(context, title, _selectedAiSubject.value, content)
+    }
+
+    fun clearAiResponse() {
+        _aiResponse.value = ""
     }
 }

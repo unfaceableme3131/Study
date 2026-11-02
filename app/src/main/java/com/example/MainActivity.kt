@@ -35,6 +35,10 @@ import com.example.ui.viewmodel.StudyViewModel
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // Configure Firebase App Check with launch intent before UI/ViewModels
+        com.example.ai.configureAppCheck(this, intent)
+
         enableEdgeToEdge()
         setContent {
             val studyViewModel: StudyViewModel = viewModel()
@@ -139,6 +143,28 @@ fun MainAppScaffold(viewModel: StudyViewModel) {
                     }
                 },
                 actions = {
+                    FilledTonalButton(
+                        onClick = { viewModel.navigateTo(ScreenTab.AI_COPILOT) },
+                        colors = ButtonDefaults.filledTonalButtonColors(
+                            containerColor = if (currentTab == ScreenTab.AI_COPILOT) NeonCyan else NeonCyan.copy(alpha = 0.15f),
+                            contentColor = if (currentTab == ScreenTab.AI_COPILOT) DarkOnPrimary else NeonCyan
+                        ),
+                        shape = RoundedCornerShape(10.dp),
+                        contentPadding = PaddingValues(horizontal = 8.dp, vertical = 2.dp),
+                        modifier = Modifier.testTag("top_bar_ai_tutor_button")
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.AutoAwesome,
+                            contentDescription = "Gemini AI",
+                            modifier = Modifier.size(16.dp)
+                        )
+                        Spacer(modifier = Modifier.width(4.dp))
+                        Text(
+                            text = "AI Tutor",
+                            style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold)
+                        )
+                    }
+
                     IconButton(
                         onClick = { viewModel.navigateTo(ScreenTab.SETTINGS) },
                         modifier = Modifier.testTag("top_bar_settings_button")
@@ -215,6 +241,7 @@ fun MainAppScaffold(viewModel: StudyViewModel) {
                 ScreenTab.REVISION -> RevisionTrackerScreen(viewModel = viewModel)
                 ScreenTab.ANALYTICS -> AnalyticsScreen(viewModel = viewModel)
                 ScreenTab.ALARMS -> AlarmsScreen(viewModel = viewModel)
+                ScreenTab.AI_COPILOT -> AiTutorScreen(viewModel = viewModel)
                 ScreenTab.SETTINGS -> SettingsScreen(viewModel = viewModel)
             }
         }
