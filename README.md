@@ -1,12 +1,13 @@
 # EDUCORE 🎓
 ### B.Com (Hons.) Semester 1 Academic Planner, Double Revision Tracker, Smart Alarms & AI Copilot
 
-[![Download APK](https://img.shields.io/badge/Download-Android%20APK%20(v1.0.0)-22c55e?style=for-the-badge&logo=android&logoColor=white)](../../releases/latest/download/EduCore.apk)
+[![Download APK](https://img.shields.io/badge/Download-Android%20APK%20(v2.0.0)-22c55e?style=for-the-badge&logo=android&logoColor=white)](../../releases/latest/download/EduCore.apk)
 [![Android](https://img.shields.io/badge/Platform-Android-green.svg)](https://developer.android.com)
 [![Kotlin](https://img.shields.io/badge/Language-Kotlin%202.2-blue.svg)](https://kotlinlang.org)
 [![Compose](https://img.shields.io/badge/UI-Jetpack%20Compose%20M3-cyan.svg)](https://developer.android.com/jetpack/compose)
 [![Gemini](https://img.shields.io/badge/AI-Google%20Gemini%20Flash-violet.svg)](https://deepmind.google/technologies/gemini/)
 [![Database](https://img.shields.io/badge/Storage-Room%20Database-orange.svg)](https://developer.android.com/training/data-storage/room)
+[![Version](https://img.shields.io/badge/Release-v2.0.0-blueviolet.svg)]()
 [![Target](https://img.shields.io/badge/Window-3%20Nov%20--%206%20Dec%202026-red.svg)]()
 
 > **Master the Core. Excel in Exams. Plan Smart.**
@@ -15,12 +16,13 @@
 
 ---
 
-## 📥 Direct APK Download Link
+## 📥 Direct APK Download Link (Version 2.0.0)
 
-You can download and install the application directly onto your Android device:
+You can download and install the new Version 2.0 application directly onto your Android device:
 
-- **[👉 Download Latest EduCore.apk](../../releases/latest/download/EduCore.apk)**
-- **Release Version**: `v1.0.0`
+- **[👉 Download Latest EduCore.apk (v2.0.0)](../../releases/latest/download/EduCore.apk)**
+- **[👉 Alternative Mirror: EduCore-v2.0.apk](../../releases/latest/download/EduCore-v2.0.apk)**
+- **Release Version**: `v2.0.0` (Build `2`)
 - **Requires**: Android 7.0 (Nougat) or newer (API 24 to 36)
 
 ### How to Install on Your Android Phone:
@@ -80,9 +82,9 @@ You can download and install the application directly onto your Android device:
 To attach the `.apk` file to a release on your GitHub repository:
 1. Push this project to your GitHub account using the **GitHub** button in the top toolbar.
 2. Go to your repository on GitHub and click **Releases** (on the right sidebar) &rarr; **Draft a new release**.
-3. Set Tag: `v1.0.0`
-4. Title: `EduCore v1.0.0`
-5. Drag and drop the `EduCore.apk` file into the *"Attach binaries by dropping them here or selecting them"* box.
+3. Set Tag: `v2.0.0`
+4. Title: `EduCore v2.0.0`
+5. Drag and drop both `EduCore.apk` and `EduCore-v2.0.apk` files into the *"Attach binaries by dropping them here or selecting them"* box.
 6. Click **Publish release**. The direct download link at the top of the README will instantly become live for anyone!
 
 ---
