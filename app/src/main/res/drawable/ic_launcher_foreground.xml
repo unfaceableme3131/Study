@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Outer accent target ring -->
+    <path
+        android:pathData="M54,28 A26,26 0 1,1 53.99,28 Z"
+        android:strokeColor="#38BDF8"
+        android:strokeWidth="2.5"
+        android:fillColor="#00000000" />
+    <!-- Inner glowing cap / crest -->
+    <!-- Mortarboard cap top -->
+    <path
+        android:pathData="M54,34 L76,43 L54,52 L32,43 Z"
+        android:fillColor="#38BDF8" />
+    <!-- Cap skull and drape -->
+    <path
+        android:pathData="M40,48 L40,59 C40,65 68,65 68,59 L68,48 L54,54 Z"
+        android:fillColor="#0284C7" />
+    <!-- Tassel -->
+    <path
+        android:pathData="M72,44.5 L75,46 L75,58 L73,58 L73,46 Z"
+        android:fillColor="#F8FAFC" />
+    <!-- Center Target / Star emblem in bottom -->
+    <path
+        android:pathData="M54,64 L56.5,70 L63,70 L58,74 L60,80 L54,76 L48,80 L50,74 L45,70 L51.5,70 Z"
+        android:fillColor="#F8FAFC" />
+</vector>

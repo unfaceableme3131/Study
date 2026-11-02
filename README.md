@@ -1,11 +1,84 @@
-<div align="center">
+# STUDY COMMAND CENTER 🎯
+### B.Com (Hons.) Semester 1 Academic Planner, Double Revision Tracker & Smart Alarm System
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+[![Download APK](https://img.shields.io/badge/Download-Android%20APK%20(v1.0.0)-22c55e?style=for-the-badge&logo=android&logoColor=white)](../../releases/latest/download/StudyCommandCenter.apk)
+[![Android](https://img.shields.io/badge/Platform-Android-green.svg)](https://developer.android.com)
+[![Kotlin](https://img.shields.io/badge/Language-Kotlin%202.2-blue.svg)](https://kotlinlang.org)
+[![Compose](https://img.shields.io/badge/UI-Jetpack%20Compose%20M3-cyan.svg)](https://developer.android.com/jetpack/compose)
+[![Database](https://img.shields.io/badge/Storage-Room%20Database-orange.svg)](https://developer.android.com/training/data-storage/room)
+[![Target](https://img.shields.io/badge/Window-3%20Nov%20--%206%20Dec%202026-red.svg)]()
 
-  <h1>Built with AI Studio</h2>
+> **Plan Smart. Study Consistently. Achieve More.**
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+**Study Command Center** is a high-performance Android productivity application custom-tailored for B.Com (Hons.) Semester 1 students preparing for university examinations between **3 November 2026 and 6 December 2026**.
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+---
 
-</div>
+## 📥 Direct APK Download Link
+
+You can download and install the application directly onto your Android device:
+
+- **[👉 Download Latest StudyCommandCenter.apk](../../releases/latest/download/StudyCommandCenter.apk)**
+- **Release Version**: `v1.0.0`
+- **Requires**: Android 7.0 (Nougat) or newer (API 24 to 36)
+
+### How to Install on Your Android Phone:
+1. Tap the download link above to download `StudyCommandCenter.apk` to your phone.
+2. Tap the downloaded file in your browser or Downloads folder.
+3. If Android displays *"For your security, your phone is not allowed to install unknown apps from this source"*, tap **Settings** &rarr; toggle on **Allow from this source**.
+4. Tap **Install** &rarr; **Open**.
+
+---
+
+## ⚡ Key Highlights
+
+- **33-Day Exam Countdown**: Live telemetry countdown to 6 December 2026 with real-time composite readiness index.
+- **7 Complete Subject Syllabi**:
+  1. **Financial Accounting (FA)**: 5 core units (Theoretical framework, PPE & Inventory AS-2/AS-10, Sole Prop & NPO, Inland Branches & Leases, CAS).
+  2. **Business Laws (BL)**: 5 core units (Indian Contract Act 1872, Discharge & Remedies, Special Contracts, Sale of Goods Act 1930, LLP Act 2008).
+  3. **Management Principles & Applications (MPA)**: 5 core units (Evolution, Planning & MBO, Organising, Directing & Controlling, Contemporary Trends).
+  4. **Generic Elective (GE)**: Fully customizable 5-unit syllabus module.
+  5. **Ability Enhancement Course (AEC)**: Customizable units, chapters, and revision notes.
+  6. **Skill Enhancement Course (SEC)**: Customizable practical skills tracker.
+  7. **Value Addition Course (VAC)**: Customizable ethics and values syllabus.
+- **Double Revision Guarantee**:
+  - **Phase 1: Syllabus Completion** (3 Nov – 24 Nov)
+  - **Phase 2: First Revision** (25 Nov – 30 Nov)
+  - **Phase 3: Second Revision** (1 Dec – 5 Dec)
+  - **Final Preparation** (6 Dec)
+- **Smart Alarm & Routine System**:
+  - 9 automated daily routine alarms (4:00 AM Wakeup, 4:05 AM Revision, 5:00 AM Complete, 4:00 PM Study 1, 6:00 PM Complete, 6:30 PM Study 2, 8:30 PM Complete, 9:00 PM Testing, 10:00 PM Day Target Complete).
+  - Uses native Android `AlarmManager`, `BroadcastReceiver`, custom notification channels, vibration patterns, and `BootReceiver` for device restart restoration.
+- **Productivity Analytics**:
+  - Strictly logs verified completed study sessions (no fake or inflated hours).
+  - Subject breakdown, streak counter, and daily achievement badges.
+- **Offline Room Database**:
+  - Fully offline, local persistence with Room Database, automatic default population, and JSON export/backup.
+
+---
+
+## 🏗️ Architecture & Tech Stack
+
+- **Language**: Kotlin 2.2.10
+- **UI Toolkit**: Jetpack Compose (Material 3 Dynamic Theme)
+- **Architecture**: MVVM + Clean Repository Pattern
+- **Local Persistence**: Android Jetpack Room 2.7.0 with Kotlin Coroutines & Flow
+- **Background Tasks & Alarms**: Android `AlarmManager.setExactAndAllowWhileIdle`, `BroadcastReceiver`, `NotificationCompat`
+- **Testing**: Robolectric JVM unit tests covering subjects, units, alarms, and string context
+
+---
+
+## 🚀 Publishing a Release on GitHub
+
+To attach the `.apk` file to a release on your GitHub repository:
+1. Push this project to your GitHub account using the **GitHub** button in the top toolbar.
+2. Go to your repository on GitHub and click **Releases** (on the right sidebar) &rarr; **Draft a new release**.
+3. Set Tag: `v1.0.0`
+4. Title: `Study Command Center v1.0.0`
+5. Drag and drop the `StudyCommandCenter.apk` file into the *"Attach binaries by dropping them here or selecting them"* box.
+6. Click **Publish release**. The direct download link at the top of the README will instantly become live for anyone!
+
+---
+
+## 📄 License
+Created for academic excellence and examination preparation.
